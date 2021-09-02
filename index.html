@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Library Assignment-6</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- Search Section Start -->
+        <div class="row my-4">
+            <div class="col-md-6 mx-auto">
+                <div class="input-group mb-3">
+                    <input id="input-field" type="text" class="form-control" placeholder="Enter a Book Name">
+                    <button onclick="searchButton()" class="btn           btn-outline-secondary" type="button">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Search Section End -->
+
+        <!-- Spinner Section start  -->
+        <div id="spinner" style="display: none;">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <!-- Spinner Section End  -->
+        
+        <!-- Searchfield Empty error Message Start -->
+        <div id="empty-search-field" class="text-center" style="display: none;">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="alert bg-danger text-light">
+                        Please Enter a Book Name in Input field
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Searchfield Empty error Message Start -->
+
+        <!-- No result found Message Start -->
+        <div id="no-result-found" class="text-center" style="display: none;">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <img src="no-result-found2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- No result found Message Start -->
+
+        <!-- Main Section Start  -->
+        <div id="main-container" ></div>
+            <h4 id="search-result-found"></h4>
+            <div id="books-container" class="row">
+                
+            </div>
+        </div>
+        <!-- Main Section Start  -->
+
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
