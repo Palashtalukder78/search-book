@@ -8,16 +8,17 @@
     <title>Open Library Assignment-6</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
-<style>
-    body {
-        background-color: rgb(255, 255, 255);
-    }
-</style>
 
 <body>
     <div class="container">
+        <!-- Logo Section Start  -->
+        <div class="col text-center mt-1 mb-0">
+            <img src="logo.png" class="img-fluid" style="width: 150px;" alt="">
+        </div>
+        <!-- Logo Section end  -->
+
         <!-- Search Section Start -->
-        <div class="row my-4">
+        <div class="row mb-3 mt-2">
             <div class="col-md-6 mx-auto">
                 <div class="input-group mb-3">
                     <input id="input-field" type="text" class="form-control" placeholder="Enter a Book Name">
@@ -49,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <!-- Searchfield Empty error Message Start -->
+        <!-- Searchfield Empty error Message end -->
 
         <!-- No result found Message Start -->
         <div id="no-result-found" class="text-center" style="display: none;">
@@ -59,16 +60,16 @@
                 </div>
             </div>
         </div>
-        <!-- No result found Message Start -->
+        <!-- No result found Message end -->
 
-        <!-- Main Section Start  -->
+        <!-- Main Section/all books show Start  -->
         <div id="main-container" ></div>
             <h4 id="search-result-found"></h4>
             <div id="books-container" class="row">
                 
             </div>
         </div>
-        <!-- Main Section Start  -->
+        <!-- Main Section/all books show end  -->
 
     </div>
 
