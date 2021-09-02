@@ -62,7 +62,8 @@ const displayBooks = data => {
             div.classList.add('col-md-3');
             div.innerHTML = `
                 <div class="card my-1">
-                    <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg" class="card-img-top img-fluid" alt="..." style="height: 250px">
+                    <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top img-fluid image-placeholder" alt="..." style="height: 250px">
+
                     <div class="card-body">
                         <h5 class="card-title">Book name: ${book.title}</h5>
                         <p><b>Author:</b> ${book.author_name ? book.author_name[0] : 'Unknown'}</p>
@@ -77,3 +78,7 @@ const displayBooks = data => {
         handleValidation('spinner','none');
     }
 }
+
+
+// Main 
+{/*  */}
