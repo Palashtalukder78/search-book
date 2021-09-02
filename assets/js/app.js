@@ -14,7 +14,6 @@ const searchButton = () => {
         handleValidation('empty-search-field','block');
     }else{
         // handleValidation('main-container','none');
-        
         handleValidation('no-result-found','none');
 
         const url = `https://openlibrary.org/search.json?q=${inputText}`;
@@ -55,7 +54,7 @@ const displayBooks = data => {
                         <h5 class="card-title">${book.title}</h5>
                         <p><b>Author:</b> ${book.author_name ? book.author_name[0] : 'Unknown'}</p>
                         <p><b>Publisher:</b> ${book.publisher ? book.publisher[0] : 'Unknown'}</p>
-                        <p><b>Publisher:</b> ${book.first_publish_year ? book.first_publish_year : 'Unknown'}</p>
+                        <p><b>First Publish:</b> ${book.first_publish_year ? book.first_publish_year : 'Unknown'}</p>
                         
                     </div>
                 </div> 
@@ -64,5 +63,3 @@ const displayBooks = data => {
         });
     }
 }
-
-{/* */ }
