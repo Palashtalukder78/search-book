@@ -38,7 +38,7 @@ const handleValidation = (id,display) => {
 //When input field through a value for makeing the process and disply value
 const displayBooks = data => {
     const resultFound = data.numFound;
-    const books = data.docs;
+    const books = data.docs.slice(0,36);
     //If input value is not available in the API
     if(books.length === 0){
         handleValidation('search-result-found','none');
@@ -52,12 +52,12 @@ const displayBooks = data => {
         handleValidation('search-result-found','block');
         //result founded value display  here
         const h4 = document.getElementById('search-result-found');
-        h4.innerText = `Resulted founded: ${resultFound}`;
+        h4.innerText = `Result founded: ${resultFound}`;
         mainContainer.appendChild(h4);
         //Display all the founded value from API
         const bookContainer = document.getElementById('books-container');
         bookContainer.textContent = '';
-        books?.forEach(book => {
+        books?.forEach(book =>  {
             const div = document.createElement('div');
             div.classList.add('col-md-3');
             div.innerHTML = `
